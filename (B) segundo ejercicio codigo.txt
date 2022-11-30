@@ -1,0 +1,36 @@
+int pinArray [] = {2,3,4,5,6,7,8,9,10,11 };    // Vector donde se van a declarar los LEDs.
+int waitStart= 200;  // Tiempo entre encender un LED y otro.
+int tailLength = 4;     // Numero de LEDs activos.
+int lineSize = 12;       // Numero total de LEDs.
+
+void setup()
+  {
+    int i;
+    for (i=0; i< lineSize; i++)
+    {
+      pinMode(pinArray[i], OUTPUT);
+    } 
+  }
+
+void loop()
+  {
+    int i;
+    int tailCounter = tailLength;   // Configuré la longitud de la cola en un contador.
+     for (i=0; i<lineSize; i++)
+   {
+     digitalWrite(pinArray[i],HIGH); // Enciendo consecutivamente los LEDs.
+     delay(waitStart);            // Esta variable de tiempo controla qué tan rápido los enciendo.
+     if (tailCounter == 0)
+      {
+        digitalWrite(pinArray[i-tailLength],LOW); 
+      }
+     else
+       if (tailCounter > 0)
+         tailCounter--;
+   }
+    for (i=(lineSize-tailLength); i<lineSize; i++)
+   {
+     digitalWrite(pinArray[i],LOW); // apago los leds.
+     delay(waitStart);            // Esta variable de tiempo controla qué tan rápido los enciendo, y también los apago.
+   }
+}
