@@ -1,0 +1,22 @@
+#define Potenciometro 5
+#define Buzzer 13
+#define Serialspeed 9600
+
+
+void setup()
+{
+  pinMode(Potenciometro, INPUT);
+  pinMode(Buzzer, OUTPUT);
+  digitalWrite(Buzzer, LOW);
+  Serial.begin(Serialspeed);
+}
+
+void loop()
+{
+  int readed = analogRead(Potenciometro);
+  readed = map (readed, 0, 1023, 0, 255);
+  analogWrite(Buzzer, readed);
+  Serial.print("valor: ");
+   Serial.println(readed);
+  
+}

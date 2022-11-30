@@ -1,0 +1,33 @@
+// C++ code
+//
+int LECTURA_R = 0;
+
+int LECTURA_A = 0;
+
+int LECTURA_V = 0;
+
+void setup()
+{
+  pinMode(A0, INPUT);
+  pinMode(3, OUTPUT);
+  pinMode(A1, INPUT);
+  pinMode(6, OUTPUT);
+  pinMode(A2, INPUT);
+  pinMode(5, OUTPUT);
+}
+
+void loop()
+{
+  LECTURA_R = analogRead(A0);
+  LECTURA_R = map(LECTURA_R, 0, 1023, 0, 255);
+  analogWrite(3, LECTURA_R);
+
+  LECTURA_A = analogRead(A1);
+  LECTURA_A = map(LECTURA_A, 0, 1023, 0, 255);
+  analogWrite(6, LECTURA_A);
+
+  LECTURA_V = analogRead(A2);
+  LECTURA_V = map(LECTURA_V, 0, 1023, 0, 255);
+  analogWrite(5, LECTURA_V);
+  delay(10); // Retrasa un poco para mejorar el rendimiento de la simulación.
+}

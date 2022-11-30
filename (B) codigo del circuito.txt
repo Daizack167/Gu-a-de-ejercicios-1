@@ -1,0 +1,263 @@
+#include <IRremote.h> 
+int receptor = 2; // Precionar el boton power para encender los LED
+int led_A = 12;
+int led_B = 11;
+int led_C = 10;
+int led_D = 9;
+int led_E = 8;
+int led_F = 7;
+int led_G = 6;
+int led_H = 5;
+int led_I = 4;
+int led_J = 3;
+
+IRrecv irrecv(receptor);
+decode_results codigo;
+
+void setup(){
+  Serial.begin(9600);
+  irrecv.enableIRIn();
+  
+  pinMode(led_A, OUTPUT);
+  pinMode(led_B, OUTPUT);
+  pinMode(led_C, OUTPUT);
+  pinMode(led_D, OUTPUT);
+  pinMode(led_E, OUTPUT);
+  pinMode(led_F, OUTPUT);
+  pinMode(led_G, OUTPUT);
+  pinMode(led_H, OUTPUT);
+  pinMode(led_I, OUTPUT);
+  pinMode(led_J, OUTPUT);
+}
+
+void loop(){
+  
+  if (irrecv.decode(&codigo)){
+    
+    Serial.println(codigo.value,HEX);
+    
+     if (codigo.value==0xFD00FF){
+      digitalWrite(led_A, HIGH);
+      delay(75);
+      digitalWrite(led_B, HIGH);
+      delay(75);
+      digitalWrite(led_C, HIGH);
+      delay(75);
+      digitalWrite(led_D, HIGH);
+      delay(75);
+      digitalWrite(led_E, HIGH);
+      delay(75);
+      digitalWrite(led_F, HIGH);
+      delay(75);
+      digitalWrite(led_G, HIGH);
+      delay(75);
+      digitalWrite(led_H, HIGH);
+      delay(75);
+      digitalWrite(led_I, HIGH);
+      delay(75);
+      digitalWrite(led_J, HIGH);
+      delay(500);
+       
+      digitalWrite(led_A, LOW);
+      delay(75);
+      digitalWrite(led_B, LOW);
+      delay(75);
+      digitalWrite(led_C, LOW);
+      delay(75);
+      digitalWrite(led_D, LOW);
+      delay(75);
+      digitalWrite(led_E, LOW);
+      delay(75);
+      digitalWrite(led_F, LOW);
+      delay(75);
+      digitalWrite(led_G, LOW);
+      delay(75);
+      digitalWrite(led_H, LOW);
+      delay(75);
+      digitalWrite(led_I, LOW);
+      delay(75);
+      digitalWrite(led_J, LOW);
+      delay(500);
+      
+     digitalWrite(led_A, HIGH);
+      delay(75);
+      digitalWrite(led_B, HIGH);
+      delay(75);
+      digitalWrite(led_C, HIGH);
+      delay(75);
+      digitalWrite(led_D, HIGH);
+      delay(75);
+      digitalWrite(led_E, HIGH);
+      delay(75);
+      digitalWrite(led_F, HIGH);
+      delay(75);
+      digitalWrite(led_G, HIGH);
+      delay(75);
+      digitalWrite(led_H, HIGH);
+      delay(75);
+      digitalWrite(led_I, HIGH);
+      delay(75);
+      digitalWrite(led_J, HIGH);
+      delay(500);
+      
+      digitalWrite(led_A, LOW);
+      delay(75);
+      digitalWrite(led_B, LOW);
+      delay(75);
+      digitalWrite(led_C, LOW);
+      delay(75);
+      digitalWrite(led_D, LOW);
+      delay(75);
+      digitalWrite(led_E, LOW);
+      delay(75);
+      digitalWrite(led_F, LOW);
+      delay(75);
+      digitalWrite(led_G, LOW);
+      delay(75);
+      digitalWrite(led_H, LOW);
+      delay(75);
+      digitalWrite(led_I, LOW);
+      delay(75);
+      digitalWrite(led_J, LOW);
+      delay(500); }
+     
+
+    
+    if (codigo.value==0xFD00FF){
+      digitalWrite(led_A, HIGH);
+      delay(75);
+      digitalWrite(led_B, HIGH);
+      delay(75);
+      digitalWrite(led_C, HIGH);
+      delay(75);
+      digitalWrite(led_D, HIGH);
+      delay(75);
+      digitalWrite(led_E, HIGH);
+      delay(75);
+      digitalWrite(led_F, HIGH);
+      delay(75);
+      digitalWrite(led_G, HIGH);
+      delay(75);
+      digitalWrite(led_H, HIGH);
+      delay(75);
+      digitalWrite(led_I, HIGH);
+      delay(75);
+      digitalWrite(led_J, HIGH);
+      delay(500);
+      
+      
+      digitalWrite(led_A, LOW);
+      delay(75);
+      digitalWrite(led_B, LOW);
+      delay(75);
+      digitalWrite(led_C, LOW);
+      delay(75);
+      digitalWrite(led_D, LOW);
+      delay(75);
+      digitalWrite(led_E, LOW);
+      delay(75);
+      digitalWrite(led_F, LOW);
+      delay(75);
+      digitalWrite(led_G, LOW);
+      delay(75);
+      digitalWrite(led_H, LOW);
+      delay(75);
+      digitalWrite(led_I, LOW);
+      delay(75);
+      digitalWrite(led_J, LOW);
+      delay(500);
+      
+      digitalWrite(led_A, HIGH);
+      delay(75);
+      digitalWrite(led_B, HIGH);
+      delay(75);
+      digitalWrite(led_C, HIGH);
+      delay(75);
+      digitalWrite(led_D, HIGH);
+      delay(75);
+      digitalWrite(led_E, HIGH);
+      delay(75);
+      digitalWrite(led_F, HIGH);
+      delay(75);
+      digitalWrite(led_G, HIGH);
+      delay(75);
+      digitalWrite(led_H, HIGH);
+      delay(75);
+      digitalWrite(led_I, HIGH);
+      delay(75);
+      digitalWrite(led_J, HIGH);
+      delay(500);
+      
+      digitalWrite(led_A, LOW);
+      delay(75);
+      digitalWrite(led_B, LOW);
+      delay(75);
+      digitalWrite(led_C, LOW);
+      delay(75);
+      digitalWrite(led_D, LOW);
+      delay(75);
+      digitalWrite(led_E, LOW);
+      delay(75);
+      digitalWrite(led_F, LOW);
+      delay(75);
+      digitalWrite(led_G, LOW);
+      delay(75);
+      digitalWrite(led_H, LOW);
+      delay(75);
+      digitalWrite(led_I, LOW);
+      delay(75);
+      digitalWrite(led_J, LOW);
+      delay(500); }
+    
+    
+   
+   
+    if (codigo.value==0xFD00FF){ 
+      digitalWrite(led_A, HIGH);
+      delay(75);
+      digitalWrite(led_B, HIGH);
+      delay(75);
+      digitalWrite(led_C, HIGH);
+      delay(75);
+      digitalWrite(led_D, HIGH);
+      delay(75);
+      digitalWrite(led_E, HIGH);
+      delay(75);
+      digitalWrite(led_F, HIGH);
+      delay(75);
+      digitalWrite(led_G, HIGH);
+      delay(75);
+      digitalWrite(led_H, HIGH);
+      delay(75);
+      digitalWrite(led_I, HIGH);
+      delay(75);
+      digitalWrite(led_J, HIGH);
+      delay(500);
+      
+      digitalWrite(led_A, LOW);
+      delay(75);
+      digitalWrite(led_B, LOW);
+      delay(75);
+      digitalWrite(led_C, LOW);
+      delay(75);
+      digitalWrite(led_D, LOW);
+      delay(75);
+      digitalWrite(led_E, LOW);
+      delay(75);
+      digitalWrite(led_F, LOW);
+      delay(75);
+      digitalWrite(led_G, LOW);
+      delay(75);
+      digitalWrite(led_H, LOW);
+      delay(75);
+      digitalWrite(led_I, LOW);
+      delay(75);
+      digitalWrite(led_J, LOW);
+      delay(500); }
+    
+      
+      
+    delay(500);
+    irrecv.resume();
+  }
+}

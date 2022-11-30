@@ -1,0 +1,15 @@
+int vo;
+int led=6;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(A0, INPUT);
+  pinMode(led, OUTPUT);
+}
+
+void loop()
+{
+  vo = map(int(analogRead(A0)),0,1023,0,255);
+  analogWrite(led,vo);
+  
+}

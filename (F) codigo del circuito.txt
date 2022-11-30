@@ -1,0 +1,19 @@
+int pin=11;
+int pot=A0;
+
+void setup()
+{	
+  pinMode(pin, OUTPUT);
+  pinMode(pot, INPUT);
+  
+}
+
+void loop()
+{
+  int valor_pot=analogRead(pot);
+  int parpadeo = map(valor_pot,0,1023,100,3000);
+  digitalWrite(pin, HIGH);
+  delay(parpadeo);
+  digitalWrite(pin,LOW);
+  delay(parpadeo);
+}
