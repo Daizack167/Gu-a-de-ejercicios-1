@@ -1,0 +1,82 @@
+// C++ code
+//
+void setup()
+{
+  pinMode(A0, INPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+  if (analogRead(A0) <= 50) {
+    digitalWrite(5, LOW);
+  } else {
+    digitalWrite(5, HIGH);
+  }
+
+  0 < 0;
+
+  if (analogRead(A0) <= 100) {
+    digitalWrite(6, LOW);
+  } else {
+    digitalWrite(6, HIGH);
+  }
+
+  if (analogRead(A0) <= 150) {
+    digitalWrite(7, LOW);
+  } else {
+    digitalWrite(7, HIGH);
+  }
+
+  if (analogRead(A0) <= 200) {
+    digitalWrite(8, LOW);
+  } else {
+    digitalWrite(8, HIGH);
+  }
+
+  if (analogRead(A0) <= 250) {
+    digitalWrite(9, LOW);
+  } else {
+    digitalWrite(9, HIGH);
+  }
+
+  if (analogRead(A0) <= 300) {
+    digitalWrite(10, LOW);
+  } else {
+    digitalWrite(10, HIGH);
+  }
+
+  if (analogRead(A0) <= 350) {
+    digitalWrite(11, LOW);
+  } else {
+    digitalWrite(11, HIGH);
+  }
+
+  if (analogRead(A0) <= 400) {
+    digitalWrite(12, LOW);
+  } else {
+    digitalWrite(12, HIGH);
+  }
+
+  if (analogRead(A0) <= 450) {
+    digitalWrite(13, LOW);
+  } else {
+    digitalWrite(13, HIGH);
+  }
+  
+  if (analogRead(A0) <= 350) {
+    digitalWrite(4, LOW);
+  } else {
+    digitalWrite(4, HIGH);
+  }
+    
+  delay(10); // Retrasa un poco para mejorar el rendimiento de la simulación.
+}

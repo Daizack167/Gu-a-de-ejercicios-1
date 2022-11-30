@@ -1,0 +1,60 @@
+int intensidad =0;
+int intensidad1 =0;
+int intensidad2 =0;
+int boton;
+int i;
+int valor=0;
+int valor1=0;
+int valor2=0;
+const int rojo = 3;
+const int azul = 5;
+const int verde = 6;
+void setup()
+{
+  pinMode(7,OUTPUT);
+pinMode (A1, INPUT_PULLUP);
+pinMode (A0, INPUT);
+  pinMode (A2, INPUT);
+  pinMode (A3, INPUT);
+  pinMode(rojo, OUTPUT);
+  pinMode(azul, OUTPUT);
+  pinMode(verde, OUTPUT);
+  Serial.begin (9600);
+}
+
+void loop()
+{
+  valor= analogRead (A0);
+  valor1= analogRead (A2);
+  valor2= analogRead (A3);
+  boton = digitalRead (A1);
+  
+  
+if (boton == 0) // se preciono el pulsador 
+      {    
+       delay (200); // delay antirebote
+    i= 1-i; // operacion para el on/of
+          }
+       if (i== 1)
+       {digitalWrite(7, HIGH);
+       Serial.println("LED verde sistema encendido");
+         
+         intensidad = map(valor,0,1023,0,255);
+         intensidad1 = map(valor1,0,1023,0,255);
+         intensidad2 = map(valor2,0,1023,0,255);
+      
+         analogWrite (rojo, intensidad);
+         analogWrite (azul, intensidad1);
+         analogWrite (verde, intensidad2);
+         delay (500);
+       }
+  else 
+  { Serial.println("Sistema apagado");
+   valor =0;
+         analogWrite (rojo, valor);
+         analogWrite (verde, valor);
+         analogWrite (azul, valor);
+   delay (500);
+  }
+                  
+}

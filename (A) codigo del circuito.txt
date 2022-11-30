@@ -1,0 +1,28 @@
+//Sonido De Ambulancia
+int pos = 0;
+
+void setup()
+{
+  pinMode(8, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+}
+
+void loop()
+{
+  // desactivar la función de tono para el pin 8:
+  noTone(8);
+  // toque una nota en el pin 6 durante 200 ms:
+  tone(6, 880, 200); // tocar el tono 69 (A5 = 880 Hz)
+  delay(150); // Espere 150 milisegundos
+  // desactivar la función de tono para el pin 6:
+  noTone(6);
+  // toque una nota en el pin 7 durante 500 ms:
+  tone(7, 988, 500); // tocar el tono 71 (B5 = 988 Hz)
+  delay(150); // Espere 150 milisegundos)
+  // desactivar la función de tono para el pin 7:
+  noTone(7);
+  // toque una nota en el pin 8 durante 300 ms:
+  tone(8, 1047, 300); // Tono de reproducción 72 (C6 = 1047 Hz)
+  delay(150); // Espere 150 milisegundos)
+}
