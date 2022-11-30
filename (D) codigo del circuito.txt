@@ -1,0 +1,23 @@
+// C++ code
+//
+void setup()
+{
+  pinMode(7, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(5, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(7, HIGH);
+  tone(5, 28, 20000); // Tono 9 (A0 = 28 Hz)
+  delay(100); // Espere 1000 milisegundos
+  digitalWrite(7, LOW);
+  delay(100); // Espere 1000 milisegundos
+  digitalWrite(3, HIGH);
+  tone(5, 28, 20000); // Tono 9 (A0 = 28 Hz)
+  delay(100); // Espere 1000 milisegundos
+  digitalWrite(3, LOW);
+  noTone(5);
+  delay(100); // Espere 1000 milisegundos
+}

@@ -1,0 +1,57 @@
+// C++ code
+//
+int i = 0;
+
+int j = 0;
+
+int k = 0;
+
+void setup()
+{
+  pinMode(3, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+}
+
+void loop()
+{
+  for (i = 0; i <= 255; i += 1) {
+    analogWrite(3, i);
+    analogWrite(5, 0);
+    analogWrite(6, 0);
+    delay(10); // Wait for 10 millisecond(s)
+  }
+  for (j = 0; j <= 255; j += 1) {
+    analogWrite(5, 255);
+    analogWrite(3, j);
+    analogWrite(6, 0);
+    delay(10); // Wait for 10 millisecond(s)
+  }
+  for (i = 255; i >= 0; i -= 1) {
+    analogWrite(3, i);
+    analogWrite(5, 255);
+    analogWrite(6, 0);
+    delay(10); // Wait for 10 millisecond(s)
+  }
+  for (k = 0; k <= 255; k += 1) {
+    analogWrite(3, 0);
+    analogWrite(5, 255);
+    analogWrite(6, k);
+    delay(10); // Wait for 10 millisecond(s)
+  }
+  for (j = 255; j >= 0; j -= 1) {
+    analogWrite(3, 0);
+    analogWrite(5, j);
+    analogWrite(6, 255);
+    delay(10); // Wait for 10 millisecond(s)
+  }
+  for (i = 0; i <= 128; i += 1) {
+    analogWrite(3, i);
+    analogWrite(5, 0);
+    analogWrite(6, 255);
+    delay(10); // Wait for 10 millisecond(s)
+  }
+  analogWrite(3, 0);
+  analogWrite(6, 255);
+  delay(10); // Wait for 10 millisecond(s)
+}

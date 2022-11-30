@@ -1,0 +1,28 @@
+int i=0;
+//se declara la variable de conteo
+void setup() {
+  // put your setup code here, to run once:
+DDRD=1111111111; // control del puerto es entrada (0) o es salida(1)
+pinMode(13,INPUT);
+
+}
+
+void loop() {
+  
+  // put your main code here, to run repeatedly:
+  if(digitalRead(13)==1){
+for(i=0;i<=244;i=i+4)
+{
+  PORTD=i;  // Escritura de puerto;
+  delay(100);
+ }
+  }
+  else
+  { 
+    for(i=1;i<=255;i=i+2)
+{
+  PORTD=i;  // Escritura de puerto;
+  delay(100);
+ }
+    }
+}

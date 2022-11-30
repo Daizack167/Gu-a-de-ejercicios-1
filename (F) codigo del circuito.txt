@@ -1,0 +1,17 @@
+// C++ code
+//
+void setup()
+{
+  pinMode(11, INPUT);
+  pinMode(9, OUTPUT);
+}
+
+void loop()
+{
+  if (digitalRead(11) < HIGH) {
+    digitalWrite(9, LOW);
+  } else {
+    digitalWrite(9, HIGH);
+  }
+  delay(10); // Retrasa un poco para mejorar el rendimiento de la simulación
+}
